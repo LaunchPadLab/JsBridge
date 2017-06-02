@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 @SuppressLint("SetJavaScriptEnabled")
-public class BridgeWebView extends WebView implements WebViewJavascriptBridge {
+public class BridgeWebView extends CordovaWebView implements WebViewJavascriptBridge {
 
 	private final String TAG = "BridgeWebView";
 
@@ -56,7 +56,7 @@ public class BridgeWebView extends WebView implements WebViewJavascriptBridge {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param handler
 	 *            default handler,handle messages send by js without assigned handler name,
      *            if js message has handler name, it will be handled by named handlers registered by native
@@ -206,7 +206,7 @@ public class BridgeWebView extends WebView implements WebViewJavascriptBridge {
 
 	/**
 	 * register handler,so that javascript can call it
-	 * 
+	 *
 	 * @param handlerName
 	 * @param handler
 	 */
